@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SplitDemoApp: App {
+    @State private var moims = Moim.sampleData
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                MoimsView(moims: $moims)
+            }
         }
     }
 }

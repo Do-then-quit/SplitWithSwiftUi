@@ -11,6 +11,15 @@
 		117717A72987D03000253B55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717A62987D03000253B55 /* ContentView.swift */; };
 		117717A92987D03100253B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117717A82987D03100253B55 /* Assets.xcassets */; };
 		117717AC2987D03100253B55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117717AB2987D03100253B55 /* Preview Assets.xcassets */; };
+		117717B42987D07D00253B55 /* Moim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717B32987D07D00253B55 /* Moim.swift */; };
+		117717B62987D0B100253B55 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717B52987D0B100253B55 /* Theme.swift */; };
+		117717B92987D43200253B55 /* MoimCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717B82987D43200253B55 /* MoimCardView.swift */; };
+		117717BC2987D6EC00253B55 /* MoimsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717BB2987D6EC00253B55 /* MoimsView.swift */; };
+		117717BE2987DBDB00253B55 /* MoimEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717BD2987DBDB00253B55 /* MoimEditView.swift */; };
+		117717C02987DC9D00253B55 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717BF2987DC9D00253B55 /* ThemePicker.swift */; };
+		117717C22987DCB800253B55 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717C12987DCB800253B55 /* ThemeView.swift */; };
+		117717C42987E77300253B55 /* ExpenseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717C32987E77300253B55 /* ExpenseCardView.swift */; };
+		117717C82987E86A00253B55 /* MoimDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717C72987E86A00253B55 /* MoimDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		117717A62987D03000253B55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		117717A82987D03100253B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		117717AB2987D03100253B55 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		117717B32987D07D00253B55 /* Moim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moim.swift; sourceTree = "<group>"; };
+		117717B52987D0B100253B55 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		117717B82987D43200253B55 /* MoimCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoimCardView.swift; sourceTree = "<group>"; };
+		117717BB2987D6EC00253B55 /* MoimsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoimsView.swift; sourceTree = "<group>"; };
+		117717BD2987DBDB00253B55 /* MoimEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoimEditView.swift; sourceTree = "<group>"; };
+		117717BF2987DC9D00253B55 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		117717C12987DCB800253B55 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		117717C32987E77300253B55 /* ExpenseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCardView.swift; sourceTree = "<group>"; };
+		117717C72987E86A00253B55 /* MoimDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoimDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +69,9 @@
 		117717A32987D03000253B55 /* SplitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				117717BA2987D6D600253B55 /* Views */,
+				117717B72987D41D00253B55 /* Cells */,
+				117717B22987D04500253B55 /* Models */,
 				117717A42987D03000253B55 /* SplitDemoApp.swift */,
 				117717A62987D03000253B55 /* ContentView.swift */,
 				117717A82987D03100253B55 /* Assets.xcassets */,
@@ -65,6 +86,36 @@
 				117717AB2987D03100253B55 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		117717B22987D04500253B55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				117717B32987D07D00253B55 /* Moim.swift */,
+				117717B52987D0B100253B55 /* Theme.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		117717B72987D41D00253B55 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				117717B82987D43200253B55 /* MoimCardView.swift */,
+				117717BF2987DC9D00253B55 /* ThemePicker.swift */,
+				117717C12987DCB800253B55 /* ThemeView.swift */,
+				117717C32987E77300253B55 /* ExpenseCardView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		117717BA2987D6D600253B55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				117717BB2987D6EC00253B55 /* MoimsView.swift */,
+				117717BD2987DBDB00253B55 /* MoimEditView.swift */,
+				117717C72987E86A00253B55 /* MoimDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117717BC2987D6EC00253B55 /* MoimsView.swift in Sources */,
 				117717A72987D03000253B55 /* ContentView.swift in Sources */,
+				117717B92987D43200253B55 /* MoimCardView.swift in Sources */,
+				117717BE2987DBDB00253B55 /* MoimEditView.swift in Sources */,
+				117717C82987E86A00253B55 /* MoimDetailView.swift in Sources */,
+				117717B62987D0B100253B55 /* Theme.swift in Sources */,
+				117717C02987DC9D00253B55 /* ThemePicker.swift in Sources */,
 				117717A52987D03000253B55 /* SplitDemoApp.swift in Sources */,
+				117717C42987E77300253B55 /* ExpenseCardView.swift in Sources */,
+				117717C22987DCB800253B55 /* ThemeView.swift in Sources */,
+				117717B42987D07D00253B55 /* Moim.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
