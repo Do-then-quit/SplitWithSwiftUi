@@ -77,7 +77,18 @@ extension Moim {
 extension Moim {
     static let sampleData: [Moim] =
     [
-        Moim(title: "Tokyo", attendees: [Attendee(name: "Minamino"), Attendee(name: "Kubo"), Attendee(name: "Danaka")], theme: .yellow, expenses: [Expense(memo: "first", totalSpent: 10000), Expense(memo: "Second", totalSpent: 321321), Expense(memo: "first", totalSpent: 10000), Expense(memo: "Second", totalSpent: 321321), Expense(memo: "first", totalSpent: 10000), Expense(memo: "Second", totalSpent: 321321), Expense(memo: "first", totalSpent: 10000), Expense(memo: "Second", totalSpent: 321321), Expense(memo: "first", totalSpent: 10000), Expense(memo: "Second", totalSpent: 321321), Expense(memo: "first", totalSpent: 10000), Expense(memo: "Second", totalSpent: 321321), Expense(memo: "first", totalSpent: 10000), Expense(memo: "Second", totalSpent: 321321)]),
+        Moim(title: "Tokyo",
+             attendees: [
+                Attendee(name: "Minamino"),
+                Attendee(name: "Kubo"),
+                Attendee(name: "Danaka")],
+             theme: .yellow,
+             expenses: [
+                Expense(memo: "first", totalSpent: 10000),
+                Expense(memo: "Second", totalSpent: 321321),
+             ]
+            )
+        ,
         Moim(title: "Seoul", attendees: [Attendee(name: "Minkyo"), Attendee(name: "JeongWon"), Attendee(name: "Ilsun")], theme: .orange, expenses: []),
         Moim(title: "LA", attendees: [Attendee(name: "Faker"), Attendee(name: "Deft"), Attendee(name: "Gumayusi")], theme: .poppy, expenses: [])
     ]
