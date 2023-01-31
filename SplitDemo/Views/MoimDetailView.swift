@@ -30,23 +30,16 @@ struct MoimDetailView: View {
             }
         }
         .sheet(isPresented: $isPresentingExpenseAddSheet) {
-            NavigationView {
-                VStack {
-                    TextField("Memo", text: $newExpense.memo)
-                    TextField("Spend", value: $newExpense.totalSpent, formatter: NumberFormatter())
-                }
-                .toolbar {
-                    ToolbarItem(placement: .confirmationAction) {
-                        Button("Add") {
-                            moim.expenses.append(newExpense)
-                            newExpense = Moim.Expense(memo: "Initial", totalSpent: 0)
-                            isPresentingExpenseAddSheet = false
-                        }
-                    }
-                }
-                
-            }
+            // view 를 쪼개서 다시 필요한 데이터를 넘기자.
+            // 캬 넘겼다! 근데 넘겨서 뭐함.
+            // 뭘 설정해서 넘겨야 하는지 확실히 정할 필요가 있다. 천천히 생각하죠.
+            ExpenseAddView(moim: $moim, newExpense: $newExpense, isPresentingExpenseAddSheet: $isPresentingExpenseAddSheet, moimAttendees: moim.attendees)
             
+        }
+        .onAppear {
+            // 오 아니면 선언할때 안됐던 것들은 여기서 해줄까. 여기서는 잘 되는것 같은데
+            
+            newExpense.memo = "asdf"
         }
     }
 }

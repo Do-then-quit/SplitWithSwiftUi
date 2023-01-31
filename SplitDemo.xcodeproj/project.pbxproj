@@ -20,6 +20,7 @@
 		117717C22987DCB800253B55 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717C12987DCB800253B55 /* ThemeView.swift */; };
 		117717C42987E77300253B55 /* ExpenseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717C32987E77300253B55 /* ExpenseCardView.swift */; };
 		117717C82987E86A00253B55 /* MoimDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117717C72987E86A00253B55 /* MoimDetailView.swift */; };
+		11F030E429893FBF0057F95E /* ExpenseAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F030E329893FBF0057F95E /* ExpenseAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		117717C12987DCB800253B55 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		117717C32987E77300253B55 /* ExpenseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCardView.swift; sourceTree = "<group>"; };
 		117717C72987E86A00253B55 /* MoimDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoimDetailView.swift; sourceTree = "<group>"; };
+		11F030E329893FBF0057F95E /* ExpenseAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				117717BB2987D6EC00253B55 /* MoimsView.swift */,
 				117717BD2987DBDB00253B55 /* MoimEditView.swift */,
 				117717C72987E86A00253B55 /* MoimDetailView.swift */,
+				11F030E329893FBF0057F95E /* ExpenseAddView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				117717C82987E86A00253B55 /* MoimDetailView.swift in Sources */,
 				117717B62987D0B100253B55 /* Theme.swift in Sources */,
 				117717C02987DC9D00253B55 /* ThemePicker.swift in Sources */,
+				11F030E429893FBF0057F95E /* ExpenseAddView.swift in Sources */,
 				117717A52987D03000253B55 /* SplitDemoApp.swift in Sources */,
 				117717C42987E77300253B55 /* ExpenseCardView.swift in Sources */,
 				117717C22987DCB800253B55 /* ThemeView.swift in Sources */,
