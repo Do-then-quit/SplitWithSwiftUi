@@ -28,9 +28,6 @@ struct MoimDetailView: View {
             }
         }
         .sheet(isPresented: $isPresentingExpenseAddSheet) {
-            // view 를 쪼개서 다시 필요한 데이터를 넘기자.
-            // 캬 넘겼다! 근데 넘겨서 뭐함.
-            // 뭘 설정해서 넘겨야 하는지 확실히 정할 필요가 있다. 천천히 생각하죠.
             ExpenseAddView(moim: $moim, isPresentingExpenseAddSheet: $isPresentingExpenseAddSheet)
             
         }
