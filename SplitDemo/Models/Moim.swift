@@ -26,7 +26,7 @@ struct Moim: Identifiable {
 }
 
 extension Moim {
-    struct Attendee: Identifiable {
+    struct Attendee: Identifiable, Hashable {
         let id: UUID
         var name: String
         var totalSobi: Int = 0
@@ -62,7 +62,8 @@ extension Moim {
         // var currency
         // var date
         var totalSpent: Int = 0
-        //var attendees: [Attendee]
+        var attendees: [Attendee] = []
+        var amountPerAttendee: [Attendee: Int] = [:]
         init(memo: String, totalSpent: Int) {
             self.memo = memo
             self.totalSpent = totalSpent
