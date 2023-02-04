@@ -13,8 +13,10 @@ struct MoimDetailView: View {
     
     var body: some View {
         List {
-            ForEach(moim.expenses) { expense in
-                ExpenseCardView(expense: expense)
+            ForEach($moim.expenses) { $expense in
+                NavigationLink(destination: ExpenseDetailView(expense: $expense)) {
+                    ExpenseCardView(expense: expense)
+                }
             }
             .onDelete { indices in
                 moim.expenses.remove(atOffsets: indices)
