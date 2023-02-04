@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MoimCardView: View {
     let moim: Moim
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text(moim.title)
@@ -17,13 +18,14 @@ struct MoimCardView: View {
             HStack {
                 Label("\(moim.attendees.count)", systemImage: "person.3")
                 Spacer()
-                Label("\(moim.tempTotalSobi)", systemImage: "dollarsign")
+                Label("\(moim.totalMoimSobi())", systemImage: "dollarsign")
             }
             .font(.caption)
         }
         .padding()
         .foregroundColor(moim.theme.accentColor)
     }
+    
 }
 
 struct MoimCardView_Previews: PreviewProvider {

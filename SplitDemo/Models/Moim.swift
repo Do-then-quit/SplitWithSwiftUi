@@ -73,6 +73,14 @@ extension Moim {
     mutating func removeExpense(indices: IndexSet) -> Void {
         expenses.remove(atOffsets: indices)
     }
+    
+    func totalMoimSobi() -> Int {
+        var temp = 0
+        for expense in expenses {
+            temp += expense.totalSpent
+        }
+        return temp
+    }
 }
 
 extension Moim {
