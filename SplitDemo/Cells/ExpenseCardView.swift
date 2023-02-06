@@ -10,12 +10,15 @@ import SwiftUI
 struct ExpenseCardView: View {
     let expense: Moim.Expense
     var body: some View {
-        HStack {
-            Text(expense.memo)
-            Spacer()
-            Text("\(expense.totalSpent)")
+        VStack {
+            HStack {
+                Text(expense.memo)
+                Spacer()
+                Text("\(expense.totalSpent)")
+            }
+            .padding()
+            Text(expense.date.description)
         }
-        .padding()
     }
 }
 

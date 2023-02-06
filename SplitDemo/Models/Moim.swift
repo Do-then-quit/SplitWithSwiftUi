@@ -60,13 +60,21 @@ extension Moim {
         let id: UUID = UUID()
         var memo: String = ""
         // var currency
-        // var date
+        var date: Date = Date()
         var totalSpent: Int = 0
         var attendees: [Attendee] = []
         var amountPerAttendee: [Attendee: Int] = [:]
         init(memo: String, totalSpent: Int) {
             self.memo = memo
             self.totalSpent = totalSpent
+        }
+        init(memo: String, totalSpent: Int, attendees: [Attendee]) {
+            self.memo = memo
+            self.totalSpent = totalSpent
+            self.attendees = attendees
+            for attendee in attendees {
+                self.amountPerAttendee[attendee] = totalSpent / attendees.count
+            }
         }
     }
     
@@ -84,21 +92,24 @@ extension Moim {
 }
 
 extension Moim {
+    static let sampleAttendee: [Attendee] = [
+        Attendee(name: "Minamino"),
+        Attendee(name: "Kubo"),
+        Attendee(name: "Danaka")]
+    
     static let sampleData: [Moim] =
     [
         Moim(title: "Tokyo",
-             attendees: [
-                Attendee(name: "Minamino"),
-                Attendee(name: "Kubo"),
-                Attendee(name: "Danaka")],
+             attendees: sampleAttendee,
              theme: .yellow,
              expenses: [
-                Expense(memo: "first", totalSpent: 10000),
-                Expense(memo: "Second", totalSpent: 321321),
+                Expense(memo: "first", totalSpent: 30000, attendees: sampleAttendee),
+                Expense(memo: "Second", totalSpent: 1500, attendees: sampleAttendee),
              ]
             )
         ,
         Moim(title: "Seoul", attendees: [Attendee(name: "Minkyo"), Attendee(name: "JeongWon"), Attendee(name: "Ilsun")], theme: .orange, expenses: []),
         Moim(title: "LA", attendees: [Attendee(name: "Faker"), Attendee(name: "Deft"), Attendee(name: "Gumayusi")], theme: .poppy, expenses: [])
     ]
+    
 }

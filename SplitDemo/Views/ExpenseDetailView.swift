@@ -10,20 +10,30 @@ import SwiftUI
 struct ExpenseDetailView: View {
     @Binding var expense:Moim.Expense
     var body: some View {
-        VStack {
-            Text("\(expense.totalSpent)")
+        VStack(alignment: .leading) {
+            Text("총 소비 액 : \(expense.totalSpent)")
+
             List {
-                ForEach(expense.amountPerAttendee.sorted(by: { first, second in
-                    return first.key.name > second.key.name
-                }), id: \.key) { key, value in
-                    HStack {
-                        Text(key.name)
-                        Text("\(value)")
+                ForEach(expense.attendees) { attendee in
+                    if let val =  expense.amountPerAttendee[attendee] {
+                        HStack {
+                            Text(attendee.name)
+                            Spacer()
+                            Text("\(val)")
+                        }
+                    } else {
+                        HStack {
+                            Text(attendee.name)
+                            Spacer()
+                            Text("\(0)")
+                        }
                     }
                 }
             }
+            Text(expense.date.description)
         }
         .navigationTitle(expense.memo)
+        .padding()
     }
 }
 
