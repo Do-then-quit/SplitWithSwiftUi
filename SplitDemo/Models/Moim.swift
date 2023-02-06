@@ -68,18 +68,25 @@ extension Moim {
             self.memo = memo
             self.totalSpent = totalSpent
         }
-        init(memo: String, totalSpent: Int, attendees: [Attendee]) {
+        init(memo: String, totalSpent: Int, attendees: [Attendee], date: Date) {
             self.memo = memo
             self.totalSpent = totalSpent
             self.attendees = attendees
             for attendee in attendees {
                 self.amountPerAttendee[attendee] = totalSpent / attendees.count
             }
+            self.date = date
         }
     }
     
-    mutating func removeExpense(indices: IndexSet) -> Void {
-        expenses.remove(atOffsets: indices)
+//    mutating func removeExpense(indices: IndexSet) -> Void {
+//        expenses.remove(atOffsets: indices)
+//    }
+    
+    mutating func removeExpense(deleteExpense: Expense) -> Void {
+        if let index = expenses.firstIndex(where: {$0.id == deleteExpense.id}) {
+            expenses.remove(at: index)
+        }
     }
     
     func totalMoimSobi() -> Int {
@@ -103,8 +110,8 @@ extension Moim {
              attendees: sampleAttendee,
              theme: .yellow,
              expenses: [
-                Expense(memo: "first", totalSpent: 30000, attendees: sampleAttendee),
-                Expense(memo: "Second", totalSpent: 1500, attendees: sampleAttendee),
+                Expense(memo: "first", totalSpent: 30000, attendees: sampleAttendee, date: Date.now.addingTimeInterval(-86430)),
+                Expense(memo: "Second", totalSpent: 1500, attendees: sampleAttendee, date: Date()),
              ]
             )
         ,
