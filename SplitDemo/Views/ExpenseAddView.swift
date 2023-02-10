@@ -32,12 +32,9 @@ struct ExpenseAddView: View {
                             .keyboardType(.decimalPad)
                         
                     }
-                    // 슷자 입력 후에 숫자가 없어지고 이름이 보이는 현상이 있는데스... 또 괜찮은 것 같기도...
-                    // 빈칸으로 만들었다가 입력하면 이렇게 된다 ㅠㅠ.
-                    // textfield를 따로 뷰로 빼는게 나을듯 하다.
-                    // 그래야 state를 따로 만들수있을듯.
-                    // .number 로 해결.
                 }
+                DatePicker(selection: $newExpense.date, label: { Text("Date") })
+                
             }
             .padding()
             .toolbar {
